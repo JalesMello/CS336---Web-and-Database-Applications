@@ -1,0 +1,140 @@
+{% extends "nav.html" %}
+
+{% block head %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--    Name: Jales H. Mello
+        Assignment: CS336 Assignment #9
+        Created: 4/30/17
+        Page: Workshop Schedule Page
+        Description: This is the Workshop Schedule page.
+        -->
+<html lang="en">
+<head>
+    <meta name="keywords"
+          content="Top Conference, Business Conference, Awards, Activities, Meals, Keynote Speakers,
+          Workshop Schedule, Conference Registration">
+    <meta name="description"
+          content="Business Conference Workshop Schedule. The workshop schedule available at the business conference.">
+    <meta name="author"
+          content="Jales H. Mello">
+    <meta name="robots"
+          content="index, follow">
+    <meta charset="UTF-8">
+    <title>Workshop Schedule</title>
+    <link href="{% static "styles/webdefault.css" %}" type="text/css" rel="stylesheet" />
+</head>
+{% endblock head %}
+
+{% block main %}
+    <main>
+        <h1>Workshop Schedule</h1>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Day</th>
+                        <th scope="col">Session</th>
+                        <th scope="col">Workshop Title</th>
+                        <th scope="col">Speaker</th>
+                        <th scope="col">Room</th>
+                        <th scope="col">Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="6">Day 1</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="5">Session 1</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>{{ 1A.title }}</td>
+                        <td>Mr. Smith</td>
+                        <td>{{ 1A.room }}</td>
+                        <td>{{ 1A.start }} - {{ 1A.end }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>{{ 1B.title }}</td>
+                        <td>Ms. Pollie</td>
+                        <td>{{ 1B.room }}</td>
+                        <td>{{ 1B.start }} - {{ 1B.end }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>{{ 1C.title }}</td>
+                        <td>Mr. Robbins</td>
+                        <td>{{ 1C.room }}</td>
+                        <td>{{ 1C.start }} - {{ 1C.end }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="5">Session 2</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>{{ 2A.title }}</td>
+                        <td>Ms. Pollie</td>
+                        <td>{{ 2A.room }}</td>
+                        <td>{{ 2A.start }} - {{ 2A.end }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>{{ 2B.title }}</td>
+                        <td>Mr. Robbins</td>
+                        <td>{{ 2B.room }}</td>
+                        <td>{{ 2B.start }} - {{ 2B.end }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>{{ 2C.title }}</td>
+                        <td>Mr. Smith</td>
+                        <td>{{ 2C.room }}</td>
+                        <td>{{ 2C.start }} - {{ 2C.end }}</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">Day 2</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="5">Session 3</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>{{ 3A.title }}</td>
+                        <td>Mr. Robbins</td>
+                        <td>{{ 3A.room }}</td>
+                        <td>{{ 3A.start }} - {{ 3A.end }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>{{ 3B.title }}</td>
+                        <td>Mr. Smith</td>
+                        <td>{{ 3B.room }}</td>
+                        <td>{{ 3B.start }} - {{ 3B.end }}</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>{{ 3C.title }}</td>
+                        <td>Ms. Pollie</td>
+                        <td>{{ 3C.room }}</td>
+                        <td>{{ 3C.start }} - {{ 3C.end }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <br />
+    </main>
+{% endblock main %}

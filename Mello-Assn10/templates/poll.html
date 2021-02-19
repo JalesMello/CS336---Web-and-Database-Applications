@@ -1,0 +1,89 @@
+{% extends "nav.html" %}
+
+{% block head %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--    Name: Jales H. Mello
+        Assignment: CS336 Assignment #9
+        Created: 4/30/17
+        Page: Poll Page
+        Description: This is the Poll page, reachable only via the Member Choice Awards page.
+        -->
+<html lang="en">
+<head>
+    <meta name="keywords"
+          content="Top Conference, Business Conference, Awards, Activities, Meals, Keynote Speakers,
+          Workshop Schedule, Conference Registration">
+    <meta name="description"
+          content="Business Conference Poll.">
+    <meta name="author"
+          content="Jales H. Mello">
+    <meta name="robots"
+          content="index, follow">
+    <meta charset="UTF-8">
+    <title>Poll</title>
+    <link href="{% static "styles/webdefault.css" %}" type="text/css" rel="stylesheet" />
+</head>
+{% endblock head %}
+
+{% block main %}
+    <main>
+        <h1>Polls</h1>
+        <h2>Cast your Votes!</h2><br />
+        <div id="pollContainer">
+            <div id="pollName">
+                <form id="polls" action="">
+                    <input type="radio" name="poll" id="Bill" value="Bill">Bill Jefferson<br />
+                    <input type="radio" name="poll" id="Christina" value="Christina">Christina Johnson<br />
+                    <input type="radio" name="poll" id="Jake" value="Jake">Jake Phillips
+                </form>
+            </div>
+            <div id="pollData">
+                <ul>
+                    <li id="billData">0</li>
+                    <li id="christinaData">0</li>
+                    <li id="jakeData">0</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+{% endblock main %}
+
+<script>
+    // this code deals with the poll logic:
+    function incrementPoll(data) {
+        var pollValue = data.textContent;
+        pollValue++;
+        data.textContent = pollValue;
+
+        // save the new data to the cookie
+        makeCookie();
+    }
+    var bill = document.getElementById('Bill');
+    var christina = document.getElementById('Christina');
+    var jake = document.getElementById('Jake');
+    var billData = document.getElementById('billData');
+    var christinaData = document.getElementById('christinaData');
+    var jakeData = document.getElementById('jakeData');
+    bill.addEventListener('click', function(){incrementPoll(billData)}, false);
+    christina.addEventListener('click', function(){incrementPoll(christinaData)}, false);
+    jake.addEventListener('click', function(){incrementPoll(jakeData)}, false);
+
+    // this code deals with the cookies:
+    function makeCookie() {
+        document.cookie = "bill=" + billData.textContent;
+        document.cookie = "christina=" +christinaData.textContent;
+        document.cookie = "jake=" + jakeData.textContent;
+    }
+    function checkCookie() {
+        if(document.cookie){
+
+        }
+        else {
+            billData.textContent = '0';
+            christinaData.textContent = '0';
+            jakeData.textContent = '0';
+        }
+    }
+    window.onload = checkCookie();
+</script>

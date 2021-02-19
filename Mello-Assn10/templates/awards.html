@@ -1,0 +1,76 @@
+{% extends "nav.html" %}
+
+{% block head %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--    Name: Jales H. Mello
+        Assignment: CS336 Assignment #9
+        Created: 4/30/17
+        Page: Template Page
+        Description: This is the Member Choice Awards page.
+        -->
+<html lang="en">
+<head>
+    <meta name="keywords"
+          content="Top Conference, Business Conference, Awards, Activities, Meals, Keynote Speakers,
+          Workshop Schedule, Conference Registration">
+    <meta name="description"
+          content="Business Conference Awards. Awards being presented at the business conference.">
+    <meta name="author" content="Jales H. Mello">
+    <meta name="robots" content="index, follow">
+    <meta charset="UTF-8">
+    <title>Member Choice Awards</title>
+    <link href="{% static "styles/webdefault.css" %}" type="text/css" rel="stylesheet" />
+</head>
+{% endblock head %}
+
+{% block main %}
+    <main>
+        <h1>Awards</h1>
+        <section>
+            <form action="{% url 'awards' %}" method="post">{% csrf_token %}
+            <table class="center">
+                <thead>
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Entry</th>
+                        <th scope="col">Current Votes</th>
+                        <th scope="col">Vote</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Controller</td>
+                        <td>Bill Jefferson</td>
+                        <td><img src="{% static "images/bill_jefferson.png" %}" alt="Sample graphic of fictional Bill Jefferson"
+                            title="Bill Jefferson" width="150" height="150"></td>
+                        <td>{{ bill.votes }}</td>
+                    </tr>
+                    <tr>
+                        <td>Sales Manager</td>
+                        <td>Christina Johnson</td>
+                        <td><img src="{% static "images/christina_johnson.png" %}" alt="Sample graphic of fictional Christina Johnson"
+                            title="Christina Johnson" width="150" height="150"></td>
+                        <td>{{ chris.votes }}</td>
+                    </tr>
+                    <tr>
+                        <td>Project Manager</td>
+                        <td>Jake Phillips</td>
+                        <td><img src="{% static "images/jake_phillips.png" %}" alt="Sample graphic of fictional Jake Phillips"
+                            title="Jake Phillips" width="150" height="150"></td>
+                        <td>{{ jake.votes }}</td>
+                    </tr>
+
+                    {{ award_form.as_table }}
+
+                </tbody>
+            </table>
+                <input type="submit" value="Submit" />
+            </form>
+        </section>
+    <br/>
+    <br/>
+
+    </main>
+{% endblock main %}

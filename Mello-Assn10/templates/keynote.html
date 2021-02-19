@@ -1,0 +1,45 @@
+{% extends "nav.html" %}
+
+{% block head %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--    Name: Jales H. Mello
+        Assignment: CS336 Assignment #9
+        Created: 4/30/17
+        Page: Keynote Page
+        Description: This is the Keynote Speakers.
+        -->
+<html lang="en">
+<head>
+    <meta name="keywords"
+          content="Top Conference, Business Conference, Awards, Activities, Meals, Keynote Speakers,
+          Workshop Schedule, Conference Registration">
+    <meta name="description"
+          content="Business Conference Keynote Speakers. Keynote speakers presenting at the business conference.">
+    <meta name="author"
+          content="Jales H. Mello">
+    <meta name="robots"
+          content="index, follow">
+    <meta charset="UTF-8">
+    <title>Keynote Speakers</title>
+    <link href="{% static "styles/webdefault.css" %}" type="text/css" rel="stylesheet" />
+</head>
+{% endblock head %}
+
+{% block main %}
+    <main>
+        <h1>Keynote Speakers</h1>
+        <div class="horizontalsection">
+            <div class="note1">
+                <img src="{% static "images/speaker1.jpg" %}" class="jobs" alt="First speaker, Steve Jobs" title="Steve Jobs">
+                <p>Steve Jobs</p>
+                <p>CEO of Apple, Inc.</p>
+            </div>
+            <div class="note2">
+                <img src="{% static "images/speaker2.jpeg" %}" class="gates" alt="Second speaker, Bill Gates" title="Bill Gates">
+                <p>Bill Gates</p>
+                <p>CEO of Microsoft</p>
+            </div>
+        </div>
+    </main>
+{% endblock main %}

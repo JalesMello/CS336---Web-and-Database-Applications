@@ -1,0 +1,44 @@
+{% extends "nav.html" %}
+
+{% block head %}
+{%  load staticfiles %}
+<!DOCTYPE html>
+<!--    Name: Jales H. Mello
+        Assignment: CS336 Assignment #7
+        Created: 4/14/17
+        Page: Activities Page
+        Description: This is the Local Activities page.
+        -->
+<html lang="en">
+<head>
+    <meta name="keywords"
+          content="Top Conference, Business Conference, Awards, Activities, Meals, Keynote Speakers,
+          Workshop Schedule, Conference Registration">
+    <meta name="description"
+          content="Business Conference Activities. Various activities available at the business conference.">
+    <meta name="author"
+          content="Jales H. Mello">
+    <meta name="robots"
+          content="index, follow">
+    <meta charset="UTF-8">
+    <title>Local Activities</title>
+    <link href="{% static "styles/webdefault.css" %}" type="text/css" rel="stylesheet" />
+</head>
+{% endblock head %}
+
+{% block main %}
+    <main>
+        <h1>Local Activities</h1>
+        <section>
+            <ul>
+                <li>Relax at the spa</li>
+                <li>Read at the library</li>
+                <li>Eat and drink at the coffee shop</li>
+                <li>Exercise at the local gym</li>
+            </ul>
+        </section>
+        <section>
+            <iframe width="854" height="480" src="https://www.youtube.com/embed/qw4TolHss6I" frameborder="0" allowfullscreen></iframe>
+        </section>
+    </main>
+{% endblock main %}

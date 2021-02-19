@@ -1,0 +1,53 @@
+{% extends "nav.html" %}
+
+{% block head %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--    Name: Jales H. Mello
+        Assignment: CS336 Assignment #9
+        Created: 4/30/17
+        Page: Meals Page
+        Description: This is the Meals page.
+        -->
+<html lang="en">
+<head>
+    <meta name="keywords"
+          content="Top Conference, Business Conference, Awards, Activities, Meals, Keynote Speakers,
+          Workshop Schedule, Conference Registration">
+    <meta name="description"
+          content="Business Conference Meals. Meals available at the business conference.">
+    <meta name="author"
+          content="Jales H. Mello">
+    <meta name="robots"
+          content="index, follow">
+    <meta charset="UTF-8">
+    <title>Meals</title>
+    <link href="{% static "styles/webdefault.css" %}" type="text/css" rel="stylesheet" />
+</head>
+{% endblock head %}
+
+{% block main %}
+    <main>
+        <h1>Meals Menu</h1>
+        <div class="horizontalsection">
+            <div class="menu1col">
+                <img src="{% static "images/menu1.png" %}" class="menu1" alt="Image of the word Menu for day 1" title="Menu for day 1">
+                <p>Menu Day 1</p>
+                <p>Breakfast<br />Rolls, Fruit, Coffe</p>
+                <p>Lunch<br />Sandwiches, Tea, Water</p>
+                <p>Dinner<br />Steak, Salad, Red Wine</p>
+            </div>
+            <div class="menu2col">
+                <img src="{% static "images/menu2.png" %}" class="menu2" alt="Image of the word Menu for day 2" title="Menu for day 2">
+                <p>Menu Day 2</p>
+                <p>Breakfast<br />Rolls, Fruit, Coffe</p>
+                <p>Lunch<br />Sandwiches, Tea, Water</p>
+                <p>Dinner<br />Fish, Salad, White Wine</p>
+            </div>
+            <div class="mealPageBottom">
+                <p>Full Meal Package: $250.00 (includes Dinner for Day 2)<br />
+                    Dinner Day 2: $75.00</p>
+            </div>
+        </div>
+    </main>
+{% endblock main %}

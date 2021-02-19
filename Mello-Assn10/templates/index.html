@@ -1,0 +1,50 @@
+{% extends "nav.html" %}
+
+{% block head %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<!--    Name: Jales H. Mello
+        Assignment: CS336 Assignment #9
+        Created: 4/30/17
+        Page: Index Page
+        Description: This is the Index/Home page.
+        -->
+<html lang="en">
+<head>
+    <meta name="keywords"
+          content="Top Conference, Business Conference, Awards, Activities, Meals, Keynote Speakers,
+          Workshop Schedule, Conference Registration">
+    <meta name="description"
+          content="Business Conference, rated as the best business conference for professionals of all
+          areas. Located in Riverside California.">
+    <meta name="author"
+          content="Jales H. Mello">
+    <meta name="robots"
+          content="index, follow">
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="{% static "styles/webdefault.css" %}" type="text/css" rel="stylesheet" />
+</head>
+{% endblock head %}
+
+{% block main %}
+    <main>
+        <h1>Welcome - Business Conference 2017</h1>
+        <div class="horizontalsection">
+            <p>
+                Hello and welcome to this business conference. This conference is made up of 3 sessions and 3 workshops
+                per session. The 1<sup>st</sup> session is called Sales and Marketing and consists of workshops on
+                topics regarding Client Procedures, Contracts, and Closing Techniques. The 2<sup>nd</sup> session is
+                called Accounting and H.R. and consists of workshops on topics regarding Accounting, H.R.,
+                and Legal/Tax matters. Lastly, the 3<sup>rd</sup> session consists of workshops regarding Production,
+                Purchasing, and Project Coordination.
+            </p>
+            <p>
+                The business conference starts on <time datetime="2017-07-01T09:00">July 1<sup>st</sup> 2017</time>
+                at <time>09:00</time> PST.
+            </p>
+            <img src="{% static "images/conference_entrance.jpg" %}" alt="Entrance to business conference building"
+                 title="Business Conference Entrance" class="openingimg">
+        </div>
+    </main>
+{% endblock main %}

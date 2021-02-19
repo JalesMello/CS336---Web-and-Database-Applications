@@ -1,0 +1,37 @@
+{% block head %}Comment & head for each page go here.{% endblock head %}
+
+<body>
+    <header>
+        <div class="horizontalsection">
+            <div class="header">
+                <nav>
+                    <a href="{% url 'index' %}">Home</a>
+                    <a href="{% url "awards" %}">Member Choice Awards</a>
+                    <a href="{% url "activities" %}">Local Activities</a>
+                    <a href="{% url "meals" %}">Meals</a>
+                    <a href="{% url "keynote" %}">Keynote Speakers</a>
+                    <a href="{% url "workshopschedule" %}">Workshop Schedule</a>
+                    <a href="{% url "registration" %}">Registration Form</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+{% block main %}Main for body goes here.{% endblock main %}
+
+    <footer>
+        <div class="horizontalsection">
+            <div class="footer">
+                <address><small>
+                    6920 Sycamore Canyon Blvd<br />
+                    Riverside, CA 92507<br />
+                </small></address>
+                <address><small>
+                    999-999-9999<br />
+                    info@business.com
+                </small></address>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

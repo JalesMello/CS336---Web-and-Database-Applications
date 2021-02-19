@@ -1,0 +1,116 @@
+/*  Name: Jales H. Mello
+    Assignment: CS336 Assignment #5
+    Created: 4/5/17
+    Description: This page contains CSS info for all HMTL pages (except for the tag pages).
+*/
+
+/* CSS for All Pages */
+.horizontalsection {
+    clear: both;
+    width: 100%;
+}
+nav {
+    text-align: center;
+    display: block;
+    font-family: 'Arial', 'serif';
+    color: #ffffff;
+    background-color: #595959;
+    padding: 1em 0 1em 0;
+}
+nav a {
+    padding-right: 1em;
+    text-decoration: none;
+    color: #ffffff;
+}
+nav a:hover {
+    color: #c1c1c1;
+}
+h1 {
+    text-align: center;
+}
+footer {
+    clear: both;
+}
+
+/* CSS for Home Page */
+.openingimg {
+    width: 100%;
+}
+
+/* CSS for the Meals Page */
+.menu1col {
+    float: left;
+    width: 40%;
+    margin: 1em;
+    text-align: center;
+}
+.menu2col {
+    float: left;
+    width: 40%;
+    margin: 1em;
+    text-align: center;
+}
+.mealPageBottom {
+    clear: both;
+    width: 100%;
+    text-align: center;
+}
+img.menu1 {
+    width: 150px;
+    height: 150px;
+}
+img.menu2 {
+    width: 150px;
+    height: 150px;
+}
+
+/* CSS for the Keynote Page */
+.note1 {
+    float: left;
+    width: 47%;
+    margin: 1em;
+    text-align: center;
+}
+.note2 {
+    float: left;
+    width: 47%;
+    margin: 1em;
+    text-align: center;
+}
+img.jobs {
+    width: 150px;
+    height: 150px;
+}
+img.gates {
+    width: 150px;
+    height: 150px;
+}
+
+/* CSS for the Registration Page */
+#form {
+    margin: auto;
+    width: 70%;
+    background-color: skyblue;
+    border: 2px solid black;
+    padding: 10px;
+    font-size: 1.3em;
+}
+#CompanyInformation {
+    display: none;
+}
+#DiningInformation {
+    display: none;
+}
+#WorkshopInformation {
+    display: none;
+}
+#BillingInformation {
+    display: none;
+}
+
+/* CSS for Awards Page */
+table.center {
+    margin-left:auto;
+    margin-right:auto;
+}
+

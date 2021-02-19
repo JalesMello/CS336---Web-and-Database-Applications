@@ -1,0 +1,12 @@
+/*  Name: Jales H. Mello
+    Assignment: CS336 Assignment #8
+    Created: 4/20/17
+    Description: This page contains CSS info for all the participantlists html pages
+*/
+span {
+    font-family: 'Arial', 'serif';
+}
+#name {
+    font-family: "Arial Rounded MT Bold";
+    color: blue;
+}

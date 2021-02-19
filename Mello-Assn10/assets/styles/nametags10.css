@@ -1,0 +1,48 @@
+/*  Name: Jales H. Mello
+    Assignment: CS336 Assignment #5
+    Created: 4/14/17
+    Description: This page contains CSS info for the nametags10.html page.
+*/
+body {
+    margin-top: 15mm;
+    margin-left: 30mm;
+    margin-right: 30mm;
+    margin-bottom: 15mm;
+}
+.tag {
+    text-align: center;
+    width: 76mm;
+    height: 50mm;
+    float: left;
+    border: solid;
+}
+.fName {
+    font-size: 22px;
+    font-weight: bold;
+    color: green;
+}
+.lName {
+    font-size: 22px;
+    font-weight: bold;
+    color: green;
+}
+.title {
+    font-size: 14px;
+    font-weight: bold;
+    color: red;
+}
+.company {
+    font-size: 12px;
+}
+.city {
+    font-size: 12px;
+}
+.state {
+    font-size: 12px;
+}
+.pagebreak {
+    page-break-before: always;
+    margin-bottom: 14mm;
+    clear: both;
+    width: 100%;
+}
